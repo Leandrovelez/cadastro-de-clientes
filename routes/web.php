@@ -24,6 +24,6 @@ Route::prefix('clientes')->name('clientes.')->group(function (){
     Route::get('/visualizar/{id}', 'App\Http\Controllers\ClienteController@visualizar')->name('visualizar');
     Route::get('/editar/{id}', 'App\Http\Controllers\ClienteController@editar')->name('editar');
     Route::post('/atualizar', 'App\Http\Controllers\ClienteController@atualizar')->name('atualizar');
-    Route::get('/deletar/{id}', 'App\Http\Controllers\ClienteController@deletar')->name('deletar');
+    Route::post('/deletar/{id}', 'App\Http\Controllers\ClienteController@deletar')->name('deletar');
 });
 

@@ -8,12 +8,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/8d70dac4bc.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Listar</title>
 </head>
 <body>
     <div class="container justify-content-center">
         <h1>Lista de clientes</h1>
-        <table class="table table-dark table-hover">
+        <table class="table table-dark table-hover mt-2">
             <thead>
                 <th>Nome</th>
                 <th>E-mail</th>
@@ -45,13 +46,17 @@
                         <a href="{{route('clientes.editar', $cliente->id)}}">
                             <i class="fa-solid fa-pen-to-square" title="Editar"></i>
                         </a>
-                        <i class="fa-solid fa-trash text-primary" title="Excluir" data-bs-toggle="modal" data-bs-target="#confirmaExclusao" data-id="{{ $cliente->id }}"></i>  
+                        <i class="fa-solid fa-trash hover" title="Excluir" data-bs-toggle="modal" data-bs-target="#confirmaExclusao" data-id="{{ $cliente->id }}"></i>  
                     </td>
                 </tr>
                 @endforeach
-                 
             </tbody>
         </table>
+        <div class="row mb-4">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+            {{ $clientes->links() }}
+            </div>
+        </div>
     </div>
 
     <!-- Modal -->
@@ -66,15 +71,22 @@
                     Deseja excluir o cliente?
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <form id="deleteForm" action="" method="">
+                    <button class="btn btn-secondary bg-gray-500" data-bs-dismiss="modal">Cancelar</button>
+                    <form id="deleteForm" action="" method="POST">
                     @csrf
-                        <input type="submit" value="Excluir" class="btn btn-primary"/>
+                        <input type="submit" value="Excluir" class="btn btn-primary bg-blue-500"/>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+    <style>
+        .hover:hover{
+            cursor: pointer;
+            color: #1F51FF;
+        }
+
+    </style>
     <script>
         
         $('#confirmaExclusao').on('show.bs.modal', function (event) {

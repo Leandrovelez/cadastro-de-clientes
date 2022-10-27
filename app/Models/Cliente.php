@@ -18,7 +18,7 @@ class Cliente extends Model
     }
 
     public function listar(){
-        return $this->all();
+        return $this->paginate(10);
     }
 
     public function criar($cliente){

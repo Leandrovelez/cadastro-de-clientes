@@ -91,8 +91,6 @@ class ClienteController extends Controller
 
     public function deletar($clienteId){
         $deletar = $this->clienteRepository->deletar($clienteId);
-        if($deletar){
-            return $this->listar();
-        }
+        return redirect()->route('clientes.listar');
     }
 }

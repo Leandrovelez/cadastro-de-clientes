@@ -49,9 +49,9 @@
                     <div class="card-body">
                         <h5 class="card-title">Serviços contratados</h5>
                         @foreach($servicos as $servico)
-                            <small>
-                            <i class="alert alert-primary" role="alert">{{$servico}}</i>
-                            </small>
+                        <small class="m-1 d-inline-flex mb-3 px-2 py-1 fw-semibold text-success bg-success bg-opacity-10 border border-success border-opacity-10 rounded-2">
+                            {{$servico}}
+                        </small>
                         @endforeach
                     </div>
                 </div>
