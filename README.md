@@ -1,66 +1,44 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+## Sistema de cadastro de clientes
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Esse é um sistema para cadastrar clientes, informando nome, e-mail, telefone, empresa e servicços contratados.
+Nos serviços contratados eu usei select2 para possibilitar selecionar mais de um serviço. Os serviços são predefinidos com uma seeder.
+Na lista de clientes, é exibido as informações e serviços, e as opções de editar e excluir. Na opção de excluir é exibido um modal de confirmação.
 
-## About Laravel
+#Telas do sistema
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- Tela inicial
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+![Captura de tela 2022-11-18 144307](https://user-images.githubusercontent.com/80285958/202769843-3df8dc42-ee77-47d7-99ae-1944258c9ef1.png)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- Formulário de cadastro
 
-## Learning Laravel
+![Captura de tela 2022-11-18 144328](https://user-images.githubusercontent.com/80285958/202769894-4adf24b2-d0a4-47af-b925-180e0ffe55c7.png)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- Formulário de edição
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+![Captura de tela 2022-11-18 144445](https://user-images.githubusercontent.com/80285958/202769990-e88f11d6-5bbb-4834-85c4-0dcc28ca2ff5.png)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- Lista de clientes
 
-## Laravel Sponsors
+![Captura de tela 2022-11-18 144407](https://user-images.githubusercontent.com/80285958/202770056-1bec1f63-5f69-41cd-b6c9-6da5459c9042.png)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+- Página de detalhes
 
-### Premium Partners
+![Captura de tela 2022-11-18 144424](https://user-images.githubusercontent.com/80285958/202770246-278b57df-8e98-4e9e-95d2-f5758a3e68c5.png)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+- Modal de confirmação de exclusão
 
-## Contributing
+![Captura de tela 2022-11-18 144503](https://user-images.githubusercontent.com/80285958/202770287-43996a68-f3e9-494b-b606-bc708c0873df.png)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+# Instalação
+   
+Baixe os arquivos do projeto e rode o comando na raiz da pasta:
 
-## Code of Conduct
+    $composer install
+ 
+Depois inice o servidor:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+    $php artisan serve
+   
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
